@@ -10,7 +10,7 @@ export const HomePage=()=> {
   useEffect(
       ()=>{
         const fetchAllTeams=async ()=>{
-            const response= await fetch(`http://localhost:8080/teams/`);
+            const response= await fetch(`${process.env.REACT_APP_API_ROOT_URL}/teams/`);
             const data=await response.json();
             //console.log(data);
             setTeams(data);
@@ -30,9 +30,9 @@ if(!teams){
         <div className="app-name">
             <h1>IPL DashBoard</h1>
         </div>
-        <div class="team-grid">
+        <div className="team-grid">
         {
-            teams.map(team=><TeamTile teamName={team.teamName}/>)
+            teams.map(team=><TeamTile key={team.id} teamName={team.teamName}/>)
         }
         </div>
     </div>
