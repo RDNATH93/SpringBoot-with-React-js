@@ -1,0 +1,31 @@
+.TeamPage{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    .team-name-section{
+        grid-column: span 3;
+        justify-self: start;
+        align-self: end;
+    }
+    .team-name{
+        font-size: 3rem;
+    }
+    .win-loss-section{
+        justify-self: center;
+        text-align: center;
+        padding:20px ;
+        height: 200px;
+    }
+    .match-details-section{
+        grid-column: span 4;
+    }
+
+    .more-link{
+        align-self: center;
+        justify-self: center;
+    }
+
+}
