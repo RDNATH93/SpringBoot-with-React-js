@@ -9,6 +9,7 @@ export const TeamPage=()=> {
 
   const [team,setTeam]=useState({matchPlayed: []});
   const { teamName }=useParams();
+  const year=process.env.REACT_APP_DATA_END_YEAR;
 
   useEffect(
       ()=>{
@@ -34,7 +35,7 @@ if(!team || !team.teamName){
         <h1 className="team-name">{team.teamName}</h1>
       </div>
       <div className="win-loss-section">
-        Wins/Losses
+        <p>Wins/Losses</p>
         <PieChart
             data={[
               { title: 'Losses', value: team.totalMatches-team.totalWins, color: '#dc143c' },
@@ -49,7 +50,7 @@ if(!team || !team.teamName){
       {team.matchPlayed.slice(1).map(match =><MatchSmallCard teamName={team.teamName} match={match}/>)}
       
       <div className="more-link">
-        <a href="#">More {'>'} </a>
+        <a href={`/teams/${team.teamName}/matches/${year}`}>More {'>'} </a>
       </div>
     </div>
   );
