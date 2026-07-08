@@ -7,3 +7,5 @@ npm run build ->it will build the code and push it under src/main/resources/publ
 .\mvnw install  -> it will compile build and generate the jar
 
 Test Github Checks for Pull Request
+
+updated
