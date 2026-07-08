@@ -5,3 +5,9 @@ npm run build ->it will build the code and push it under src/main/resources/publ
 
 ### To Build Spring Boot code ###
 .\mvnw install  -> it will compile build and generate the jar
+
+
+Test Github Checks for Pull Request
+
+updated
+
