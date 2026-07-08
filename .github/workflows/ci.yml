@@ -1,0 +1,22 @@
+name: Pull Request Check
+
+# This tells GitHub to run the check whenever a PR is opened or updated
+on:
+  pull_request:
+    branches: [ github_action ]
+
+jobs:
+  test-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Downloads your repository code onto the runner machine
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # 2. Simulate running a test suite or linter
+    - name: Run Code Checks
+      run: |
+        echo "Running automated tests..."
+        echo "Running code linter..."
+        echo "All checks passed successfully!"
